@@ -3,8 +3,9 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://pbs.twimg.com/profile_images/568358346785177600/OCsnjqnz.png" />
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Email Old School RuneScape News Updates</title>
   <style>
     body {
       margin: 0; padding: 0;
@@ -281,20 +282,22 @@
           $('label').fadeIn();
           $('#email').addClass('test');
         });
-        $.ajax({
-          type: "POST",
-          url: form.attr('action'),
-          data: form.serialize(),
-          success: function(response) {
-            // Tell them they are subscribed
-            var fadeSuccess = $('.success');
-            fadeSuccess.addClass('successful');
-            fadeSuccess.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
-            function (e) {
-              fadeSuccess.removeClass('successful');
-            });
-          }
-        });
+        if ($('#email').val().length > 0) {
+          $.ajax({
+            type: "POST",
+            url: form.attr('action'),
+            data: form.serialize(),
+            success: function(response) {
+              // Tell them they are subscribed
+              var fadeSuccess = $('.success');
+              fadeSuccess.addClass('successful');
+              fadeSuccess.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+              function (e) {
+                fadeSuccess.removeClass('successful');
+              });
+            }
+          });
+        }
       });
     });
   </script>
