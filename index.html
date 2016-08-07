@@ -1,10 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Document</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Noto Sans', sans-serif;
+    }
+    input, button {
+      background: #f2f2f2;
+      border: none;
+      box-sizing: border-box;
+      outline: none;
+      height: 40px;
+      vertical-align: bottom;
+    }
+    button {
+      background: #ccc;
+      color: white;
+      cursor: pointer;
+      font-size: 3em;
+      line-height: 0;
+      padding-bottom: 6px;
+      width: 40px;
+    }
+    input[type="submit"] {
+      background: #ccc;
+      color: white;
+      cursor: pointer;
+      font-size: 3em;
+      line-height: 0;
+      padding-bottom: 6px;
+      width: 40px;
+    }
+    input[type="email"] {
+      padding: 20px;
+    }
+    .wrapper {
+      background: white;
+    }
+    .container {
+      background: url('http://cdn.runescape.com/assets/img/external/oldschool/2016/update-newsposts/aug04/lms-header.png') top center no-repeat #212121;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0 auto;
+      width: 100%;
+    }
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      width: 100%;
+      /*background: url('http://www.runescape.com/img/rsp777/scroll/backdrop_745.gif') center center no-repeat;*/
+      background-size: cover;
+    }
+  </style>
 </head>
 <body>
-  Hello World
+  <div class="wrapper">
+    <div class="container">
+      <form action="#!">
+        <input type="email" required placeholder="Email / Cell #"><input type="submit" value="›">
+        <!-- <button type="submit">›</button> -->
+      </form>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </body>
 </html>
